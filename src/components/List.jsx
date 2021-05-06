@@ -3,6 +3,7 @@ import Card from "./Card";
 import Footer from "./Footer";
 import '../styles/list.css'
 import CardSkeleton from "../skeletons/CardSkeleton";
+import { Link } from "react-router-dom";
 
 const List = () => {
   const [tim, setTim] = useState(null);
@@ -15,21 +16,21 @@ const List = () => {
   useEffect(() => {
     getData();
   }, []);
-
-  console.log(tim);
+ 
   return (
     <>
       <div className="container">
         <h1>Daftar Tim</h1>
         <div className='list'>
           {tim === null ?
-            [1,2,3,4,5].map(n=>(<CardSkeleton />)) :
+            [1, 2, 3, 4, 5].map(n => (<CardSkeleton key={ n }/>)) :
             tim.map(element => (
-              <Card
-                key={element.idTeam}
-                nama_tim={element.strTeam}
-                logo = {element.strTeamBadge}
-              />
+              <Link to={element.strTeam} className="card-link" key={element.idTeam}>
+                <Card
+                  nama_tim={element.strTeam}
+                  logo = {element.strTeamBadge}
+                  />
+              </Link>
             ))}
         </div>
       </div>
