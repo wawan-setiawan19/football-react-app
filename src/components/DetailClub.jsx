@@ -15,7 +15,7 @@ const DetailClub = () => {
 
   useEffect(() => {
     getDetail(id_team)
-  }, [])
+  },)
 console.log(detail[0]);
   return (
     <div className="container">
