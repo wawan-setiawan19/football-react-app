@@ -10,7 +10,7 @@ const Main = () => {
       <Switch>
         <Route exact path="/" children={<Home/>} />
         <Route exact path="/daftar-tim" children={<List />} />
-        <Route path="/:nama_tim" children={<DetailClub/>} />
+        <Route path="/:id_team" children={<DetailClub/>} />
       </Switch>
     </main>
   )

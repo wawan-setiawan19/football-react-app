@@ -25,7 +25,7 @@ const List = () => {
           {tim === null ?
             [1, 2, 3, 4, 5].map(n => (<CardSkeleton key={ n }/>)) :
             tim.map(element => (
-              <Link to={element.strTeam} className="card-link" key={element.idTeam}>
+              <Link to={element.idTeam} className="card-link" key={element.idTeam}>
                 <Card
                   nama_tim={element.strTeam}
                   logo = {element.strTeamBadge}
