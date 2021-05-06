@@ -1,0 +1,24 @@
+.banner {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 70px);
+  background: url(../assets/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+
+.banner h2 {
+  font-size: 64px;
+  width: 50%;
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width:1200px) {
+  .banner h2 {
+    width: 100%;
+  }
+}

@@ -1,0 +1,22 @@
+.card {
+  width: calc(20% - 35px);
+  min-height: 200px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin: 10px 5px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image img {
+  padding: 20px;
+  width: 100%;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
