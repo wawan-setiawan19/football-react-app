@@ -17,7 +17,8 @@ const DetailClub = () => {
 
   useEffect(() => {
     getDetail(id_team)
-  },)
+  }, [id_team])
+  
 console.log(detail[0]);
   return (
     <div className="container">
@@ -25,6 +26,17 @@ console.log(detail[0]);
       {detail[0] !== undefined ? <h2>{detail[0].strTeam}</h2> :
       <h2>Nama Tim</h2>
       }
+      <WrapperSkeleton
+        child={
+          <>
+            <BasicSkeleton type="image" widthSkeleton="150"/>
+            <BasicSkeleton type="title" widthSkeleton="100%"/>
+            <BasicSkeleton type="text" widthSkeleton="100%"/>
+            <BasicSkeleton type="text" widthSkeleton="100%"/>
+            <BasicSkeleton type="text" widthSkeleton="100%"/>
+          </>
+      }
+      />
       <WrapperSkeleton
         heightWrapper='200'
         child={

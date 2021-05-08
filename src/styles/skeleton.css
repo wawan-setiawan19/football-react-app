@@ -6,19 +6,21 @@
   overflow: hidden;
 }
 
-.wrapper{
+.wrapper {
   background-color: #f6f6f6;
   padding: 10px;
   position: relative;
   border-radius: 4px;
+  margin: 10px 0;
 }
 
 .title {
+  width: 200px;
   height: 32px;
-  margin-bottom: 20px;
 }
 
-.text{
+
+.text {
   height: 20px;
 }
 
@@ -26,6 +28,12 @@
   margin: 0 auto;
   height: 250px;
   border-radius: 4px;
+}
+
+@media screen and (max-width:576px) {
+  .image {
+    height: 150px;
+  }
 }
 
 .second {

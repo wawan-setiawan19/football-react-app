@@ -1,12 +1,16 @@
 import '../styles/footer.css'
-const Footer = ({ background, position }) => {
+const Footer = ({ background }) => {
   const style = {
     backgroundColor: background,
-    position: position,
   }
   return (
     <footer style={style}>
-      Copyright 2021 by Wawan develop with React JS
+      <div className="not-mobile">
+        Copyright 2021 by Wawan develop with React JS
+      </div>
+      <div className="mobile">
+        Copyright 2021 by Wawan
+      </div>
     </footer>
   )
 }

@@ -9,6 +9,7 @@
   overflow: hidden;
 }
 
+
 .card-image img {
   padding: 20px;
   width: 100%;
@@ -24,4 +25,23 @@ a {
   flex-basis: 20%;
   text-decoration: none;
   color: black;
+}
+
+@media screen and (max-width:576px) {
+  a {
+    flex-basis: 50%;
+  }
+
+  .card-image img {
+    padding: 10px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+
+  .card-skeleton {
+    width: calc(50% - 10px);
+    padding: 10px;
+  }
 }

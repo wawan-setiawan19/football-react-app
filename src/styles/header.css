@@ -11,6 +11,7 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  flex-wrap: wrap;
 }
 
 .brand-name {
@@ -23,9 +24,29 @@ ul {
   display: flex;
 }
 
+
 ul li {
   margin-left: 20px;
   margin-right: 20px;
+}
+
+@media screen and (max-width:576px) {
+  .brand-name{
+    width: 100%;
+    text-align: center;
+  }
+
+  nav{
+    width: 100%;
+  }
+
+  ul{
+    justify-content: space-between;
+  }
+
+  ul li{
+    margin: 0;
+  }
 }
 
 .link {

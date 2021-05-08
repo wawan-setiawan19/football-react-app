@@ -3,7 +3,7 @@ const BasicSkeleton = ({ type, widthSkeleton }) => {
   const classes = `skeleton ${type}`;
 
   return (
-    <div className={classes} style={{width:`${widthSkeleton}px`,}}>
+    <div className={classes} style={{width:widthSkeleton,}}>
       <div className="shimer"></div>
     </div>
   )
