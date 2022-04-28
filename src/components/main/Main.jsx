@@ -1,8 +1,8 @@
 import { Route, Switch } from "react-router-dom"
 import Home from "./Home"
-import List from "./List"
-import '../styles/main.css'
-import DetailClub from "./DetailClub"
+import '../../styles/main.css'
+import DetailClub from "../ListTeams"
+import List from "./ListLeague"
 
 const Main = () => {
   return (

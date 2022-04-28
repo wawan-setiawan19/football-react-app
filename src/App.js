@@ -1,10 +1,11 @@
 import { BrowserRouter } from "react-router-dom";
-import Header from "./components/Header";
-import Main from "./components/Main";
+import Header from "./components/main/Header";
+import Main from "./components/main/Main";
 
 function App() {
+  const hostUrl = window.location.hostname
   return(
-  <BrowserRouter>
+  <BrowserRouter basename={hostUrl}>
     <div className="App">
         <Header />
         <Main />

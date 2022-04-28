@@ -1,29 +1,30 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
+import { getDataFromAPI } from "../helpers/api";
 import BasicSkeleton from "../skeletons/BasicSkeleton";
 import WrapperSkeleton from "../skeletons/WrapperSkeleton";
 import '../styles/detail.css'
 
-const DetailClub = () => {
+const Club = () => {
   let { id_team } = useParams();
-  const [detail, setDetail] = useState([]);
-
-  const getDetail = async (id_team) => {
-    const response = await fetch(`https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${id_team}`)
+  const [tim, setTim] = useState([]);
+  console.log(id_team)
+  const getTim = async (id_team) => {
+    const response = await getDataFromAPI(`competitions/${id_team}/teams`)
     const data = await response.json();
-    setDetail(data.teams);
+    setTim(data.competition);
   }
 
   useEffect(() => {
-    getDetail(id_team)
+    getTim(id_team)
   }, [id_team])
   
-console.log(detail[0]);
+console.log(tim[0]);
   return (
     <div className="container">
       <Link to="/daftar-tim" className="back-button"> { "<< " }Kembali </Link>
-      {detail[0] !== undefined ? <h2>{detail[0].strTeam}</h2> :
+      {tim !== undefined ? <h2>{tim.name}</h2> :
       <h2>Nama Tim</h2>
       }
       <WrapperSkeleton
@@ -50,4 +51,4 @@ console.log(detail[0]);
   )
 }
 
-export default DetailClub;
+export default Club;
